@@ -1,0 +1,84 @@
+/* SPDX-License-Identifier: MIT — Copyright (c) 2026 DyharL
+ *
+ * File: src/app/globals.css
+ * Description: Global CSS tokens — Luxury B2B Studio Lighting & Depth (#08090b, #12141a, #ffffff, #fa870b, #ffa600, #ff4f4e).
+ * Security: TR_SEC_GLOBAL_STYLES
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #08090b;
+  --surface-container-low: #101216;
+  --surface-container: #14161c;
+  --surface-container-high: #1a1d24;
+  --surface-container-lowest: #050608;
+  --on-surface: #ffffff;
+  --on-surface-variant: rgba(255, 255, 255, 0.82);
+  --outline: rgba(255, 255, 255, 0.12);
+  --outline-variant: rgba(255, 255, 255, 0.06);
+  --primary: #ffffff;
+  --primary-container: #fa870b;
+  --primary-fixed: rgba(250, 135, 11, 0.15);
+  --secondary: #ffa600;
+  --secondary-container: #fa870b;
+  --on-secondary-fixed: #000000;
+  --inverse-surface: #14161c;
+  --error: #ff4f4e;
+  --error-container: rgba(255, 79, 78, 0.15);
+  --on-error-container: #ffffff;
+
+  /* Official Veritas B2B Color Tokens */
+  --sb-bg: #08090b;
+  --sb-card: #111318;
+  --sb-card-hover: #161820;
+  --sb-card-secondary: #1a1d24;
+  --sb-border: rgba(255, 255, 255, 0.1);
+  --sb-border-subtle: rgba(255, 255, 255, 0.06);
+  --sb-border-active: rgba(250, 135, 11, 0.45);
+  --sb-orange: #fa870b;
+  --sb-amber: #ffa600;
+  --sb-red: #ff4f4e;
+  --sb-text: #ffffff;
+  --sb-text-muted: rgba(255, 255, 255, 0.8);
+  --sb-text-dim: #717684;
+}
+
+body {
+  background-color: #08090b;
+  background-image: 
+    radial-gradient(ellipse 90% 55% at 50% -15%, rgba(250, 135, 11, 0.12), transparent 70%),
+    radial-gradient(circle 600px at 90% 20%, rgba(255, 166, 0, 0.04), transparent 60%),
+    radial-gradient(circle 500px at 10% 80%, rgba(250, 135, 11, 0.03), transparent 60%);
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism & Card Elevation */
+.glass-panel {
+  background: linear-gradient(180deg, rgba(20, 22, 28, 0.85) 0%, rgba(12, 14, 18, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090b;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(250, 135, 11, 0.4);
+}
