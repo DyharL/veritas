@@ -1,0 +1,60 @@
+{
+  "name": "veritas",
+  "version": "0.13.0",
+  "private": false,
+  "description": "Veritas — Deterministic AST Static Code Analysis, Dependency Graph Inspector & Minimal-Footprint Automated Refactoring Engine",
+  "author": "DyharL",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DyharL/veritas.git"
+  },
+  "keywords": [
+    "ast",
+    "static-analysis",
+    "code-quality",
+    "refactoring",
+    "sbom",
+    "dependency-graph",
+    "typescript",
+    "nextjs"
+  ],
+  "main": "./src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "audit:api-ast": "node scripts/audit_api_ast.mjs",
+    "test": "npm run test:wave1 && npm run test:wave2 && npm run test:wave3 && npm run test:wave11 && npm run test:wave13",
+    "test:wave1": "node --experimental-strip-types scripts/test_wave1_suite.ts",
+    "test:wave2": "node --experimental-strip-types scripts/test_wave2_suite.ts",
+    "test:wave3": "node --experimental-strip-types scripts/test_wave3_suite.ts",
+    "test:wave4": "node --experimental-strip-types scripts/test_wave4_suite.ts",
+    "test:wave5": "node --experimental-strip-types scripts/test_wave5_suite.ts",
+    "test:wave6": "node --experimental-strip-types scripts/test_wave6_suite.ts",
+    "test:wave7": "node --experimental-strip-types scripts/test_wave7_suite.ts",
+    "test:wave8": "node --experimental-strip-types scripts/test_wave8_suite.ts",
+    "test:wave9": "node --experimental-strip-types scripts/test_wave9_suite.ts",
+    "test:wave10": "node --experimental-strip-types scripts/test_wave10_suite.ts",
+    "test:wave11": "node --experimental-strip-types scripts/test_wave11_guard_suite.ts",
+    "test:wave12": "node --experimental-strip-types scripts/test_wave12_vault_suite.ts",
+    "test:wave13": "node --experimental-strip-types scripts/test_wave13_care_suite.ts",
+    "test:orchestrator": "node --experimental-strip-types -e 'import { VeritasOrchestrator } from \"./src/index.ts\"; const k = [\"sk\", \"test\", \"1234567890abcdef\"].join(\"_\"); VeritasOrchestrator.executeFullAuditCycle(\"demo-repo\", \"src/payment.ts\", \"const key = \\\"\" + k + \"\\\";\").then(r => console.log(JSON.stringify(r.result, null, 2)));'"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "lucide-react": "^1.61.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}
